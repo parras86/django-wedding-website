@@ -193,12 +193,20 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    /*background-image: url('../images/big-sur.jpeg');*/
+    /*background-size: contain; /*added,2/24*/
+    background-image: url('../images/big-sur-polaroid.jpg');
+    width: 100%; /*added,2/24*/
+    /*min-height: 110%;*/ /*added,2/24*/
+    height: auto;
+    background-repeat: no-repeat; /*added,2/24*/
+    background-position: center center; /*added,2/24*/
 }
 
 header .header-content {
     position: relative;
     width: 100%;
+    min-height: auto; /*added,2/24*/
     padding: 100px 15px;
     text-align: center;
 }
@@ -208,7 +216,7 @@ header .header-content .header-content-inner h1 {
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
+    color: #f05f40; /* changed from "#fff;", 2/24*/
 }
 
 header .header-content .header-content-inner hr {
@@ -223,7 +231,12 @@ header .header-content .header-content-inner p {
 }
 
 #second-header {
-    background-image: url('../images/chapmans-peak-view.jpg');
+    background-image: url('../images/proposal.jpg');
+    /*background-size: contain; /*added,2/24*/
+    width: 100%; /*added,2/24*/
+    min-height: 100%; /*added,2/24*/
+    background-repeat: no-repeat; /*added,2/24*/
+    background-position: center center; /*added,2/24*/
 }
 
 @media(min-width:768px) {
@@ -490,6 +503,19 @@ fieldset[disabled] .btn-primary.active {
     text-shadow: none;
     color: #fff;
     background: #222;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 img::selection {

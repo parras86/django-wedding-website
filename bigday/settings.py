@@ -26,12 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Set to "console" for console output of emails or to "smtp" to send real mails
-MAIL_BACKEND = "console"
+MAIL_BACKEND = "smtp"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stacieandaj.com']
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
@@ -136,15 +136,15 @@ STATICFILES_DIRS = (
 
 # Some default values. Will be overwritten by a localsetting.py (rename 'localsettings.py.template' to 'localsettings.py')
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Bride and Groom'
+BRIDE_AND_GROOM = 'Stacie and AJ'
 # the date of your wedding
-WEDDING_DATE = 'January 1st, 1969'
+WEDDING_DATE = 'August 12, 2023'
 # the location of your wedding
-WEDDING_LOCATION = 'North Pole, USA'
+WEDDING_LOCATION = 'Toronto, Ontario (Canada)'
 # This is used in links in save the date / invitations
-WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
+WEDDING_WEBSITE_URL = 'https://stacieandaj.com'
 # base address for all emails
-DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+DEFAULT_WEDDING_EMAIL = 'happycouple@stacieandaj.com'
 WEDDING_CC_LIST = [] 
 
 # Checks, if the 'localsettings.py' is present and set some couple variables

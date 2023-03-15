@@ -27,7 +27,7 @@
                         <a class="page-scroll" href="#event">Event</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#niagara">Niagara-on-the-Lake</a>
+                        <a class="page-scroll" href="#toronto">The Archeo @Toronto's Distillery District</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#other-stuff">Everything Else</a>
@@ -45,12 +45,17 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>We did it!!</h1>
-                {% comment %}
-                <hr>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>We're getting married!!</h1>
+                <!-- <h2>It's wedding week!</h2> -->
+                {% comment %} 
                 <h2>It's wedding week!</h2>
                 <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
-                <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
+                <a href="#event" class="btn btn-primary btn-xl page-scroll">Thursday</a>
                 <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
                 {% endcomment %}
             </div>
@@ -60,24 +65,92 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
+                    <h1 class="section-heading">Welcome!</h1>
                     <hr>
+      <div class="container">
+          <div class="row">
+                <div class="col-lg-8 text-center">
+      <h2 id="headline">Countdown to our wedding</h2>
+            <div id="countdown">
+<!-- <html> -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+<p id="countdown"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 12, 2023 10:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="countdown"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "It's party time";
+  }
+}, 1000);
+</script>
+
+</body>
+<!-- </html> -->
+    <!-- <ul> -->
+      <!-- li><span id="days"></span>days</li -->
+      <!-- li><span id="hours"></span>Hours</li -->
+      <!-- li><span id="minutes"></span>Minutes</li -->
+      <!-- li><span id="seconds"></span>Seconds</li -->
+    <!-- </ul> -->
+  </div>
+      <div id="content" class="emoji">
+          <span>🥳</span>
+          <span>🎉</span>
+          <span>👰🏻‍♀️🤵🏻</span> 
+                  </div>
+                    </div>
+      </div>
+      <br>
+  </div>
                     <p>
-                        Hello friends and family! It's the week of the wedding!
+                        Hello friends and family! We are so grateful to celebrate together. We know it's a lot to coordinate for everyone traveling, so we compiled info about the event and surrounding area.
                     </p>
                     <p>
-                        If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Friday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
+                        Please see below for all the details regarding <a href="#event" class="page-scroll">Thursday night's welcome party</a> and <a href="#saturday-event" class="page-scroll">Saturday's event</a>.
                     </p>
                     <p>
-                        To get added to the wedding whatsapp group first create an account and then send an
+                        To get added to the wedding's Whatsapp group, first create an account and then send an
                         email to <a href="mailto:{{ support_email }}">{{ support_email }}</a>.
-                        Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky.
+                       <!-- Also, the current front-runner for the wedding hashtag (if you're into that sort of thing) is #getlukky. -->
                     </p>
                     <p>
                         Looking forward to seeing everyone soon!
                     </p>
-                    <p class="pull-right">- Cory and Rowena</p>
+                    <p class="pull-right">- Stacie and AJ</p>
                 </div>
             </div>
         </div>
@@ -87,7 +160,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/ravine-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/archeo.jpeg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -98,12 +171,12 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#niagara" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/prince-of-wales-hotel-nav.jpg' %}" class="img-responsive" alt="">
+                    <a href="#toronto" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/toronto.jpeg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Niagara-on-the-Lake
+                                    Toronto (The Distillery District)
                                 </div>
                             </div>
                         </div>
@@ -111,7 +184,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/twelve-apostles-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/heart-couple.jpg' %}" class="img-responsive" alt="heart-couple">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -125,8 +198,8 @@
         </div>
     </section>
     {% include 'partials/event.html' %}
-    <section id="niagara">
-        {% include 'partials/niagara.html' %}
+    <section id="toronto">
+        {% include 'partials/toronto.html' %}
     </section>
 {% comment %}
         {% include 'partials/wedding-party.html' %}
@@ -141,7 +214,9 @@
         {% include 'partials/story.html' %}
     </section>
     {% include 'partials/proposal.html' %}
+{% comment %}
     {% include 'partials/save-the-dates.html' %}
+{% endcomment %}
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
